@@ -9,6 +9,15 @@
         "export PATH=/opt/homebrew/bin:$PATH && npm run dev"
       ],
       "port": 3000
+    },
+    {
+      "name": "biais-hero-static",
+      "runtimeExecutable": "/bin/bash",
+      "runtimeArgs": [
+        "-c",
+        "export PATH=/opt/homebrew/bin:$PATH && npx --yes serve out -l 3002"
+      ],
+      "port": 3002
     }
   ]
 }
