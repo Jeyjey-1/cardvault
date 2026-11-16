@@ -1,0 +1,132 @@
+:root {
+  --bg: #121214;
+  --surface: #1c1c20;
+  --text: #f0f0f2;
+  --muted: #9a9aa2;
+  --accent: #e63946;
+  --border: #2c2c31;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.site-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px;
+}
+
+.logo { margin: 0; font-size: 1.4rem; }
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  margin-left: 16px;
+  font-size: 0.95rem;
+}
+nav a:hover { color: var(--accent); }
+
+.cart {
+  font-size: 0.9rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.hero {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(180deg, var(--surface), var(--bg));
+  border-bottom: 1px solid var(--border);
+}
+
+.hero h2 { margin: 0 0 10px; font-size: 1.8rem; }
+.hero p { color: var(--muted); margin: 0; }
+
+.section-title {
+  margin: 40px 0 20px;
+  font-size: 1.4rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  padding-bottom: 40px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card .emoji {
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 20px 0;
+  background: var(--bg);
+  border-radius: 8px;
+}
+
+.card h3 { margin: 0; font-size: 1.1rem; }
+.card p.desc { color: var(--muted); font-size: 0.9rem; margin: 0; flex-grow: 1; }
+
+.card .price {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.card button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+.card button:hover { opacity: 0.9; }
+
+.contact {
+  border-top: 1px solid var(--border);
+  padding: 40px 0;
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 20px 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+  .header-inner { flex-direction: column; align-items: flex-start; }
+  nav a { margin-left: 0; margin-right: 16px; }
+}
