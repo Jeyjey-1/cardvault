@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+:root {
+  --color-ecru: #f2f2f0;
+  --color-grey-light: #d8d8d6;
+  --color-grey-mid: #929292;
+  --color-black-deep: #080808;
+}
+
+@theme inline {
+  --color-ecru: var(--color-ecru);
+  --color-grey-light: var(--color-grey-light);
+  --color-grey-mid: var(--color-grey-mid);
+  --color-black-deep: var(--color-black-deep);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+}
+
+body {
+  background: var(--color-grey-light);
+  color: var(--color-black-deep);
+  font-family: var(--font-body), Arial, Helvetica, sans-serif;
+}
+
+.writing-vertical {
+  writing-mode: vertical-rl;
+}
+
+.bg-grain {
+  background-image: radial-gradient(
+    rgba(8, 8, 8, 0.045) 1px,
+    transparent 1px
+  );
+  background-size: 3px 3px;
+}
